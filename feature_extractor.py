@@ -48,7 +48,9 @@ def get_elapsed_day():
 def get_depth():
     
     return None    
-    
+
+def run_model(features):
+    pass
 
 def main():
     nucleotides = ['A', 'T', 'G', 'C']
@@ -65,8 +67,7 @@ def main():
     
     features = []
     aa_seq = translate_nucleotides_to_amino_acids(seq[mid_point:-mid_point], codon_mapper)
-    count1 = 0
-    count2 = 0
+
     
     for idx in range(len(seq)-k):
         
@@ -117,6 +118,7 @@ def main():
         features += sample_data
         
     # print(features)
+    run_model(features)
             
         
 main()
